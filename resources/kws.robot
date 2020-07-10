@@ -13,3 +13,6 @@ Quando submeto o meu email "${email}"
 Então devo ser autenticado
     Wait Until Page Contains Element    class:dashboard
     Close Browser
+
+Então devo ser a mensagem "${expect_message}"
+    Wait Until Element Contains     class:alert     ${expect_message}
