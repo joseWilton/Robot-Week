@@ -16,3 +16,18 @@ Então devo ser autenticado
 
 Então devo ser a mensagem "${expect_message}"
     Wait Until Element Contains     class:alert     ${expect_message}
+
+### cadastro de pratos ###
+
+Dado que "${nhoque}" é um dos meus pratos
+    Set Test Variable   ${nhoque}
+
+Quando faço o cadastro deste item
+    Click Element       class:btn-add
+    Input Text          id:name     ${produto['nome']}
+    Input Text          id:plate    ${produto['tipo']}
+    Input Text          id:price    ${produto['preco']}
+    Click Element       class:btn-cadastrar
+
+Então deve ver esse prato no meu dashoboard
+    Wait Until Element Contains     class:product-list      ${produto['nome']}
