@@ -11,7 +11,7 @@ Test Setup      Login Session       josewilltton@gmail.com
 Test Teardown   Close Session
 
 ***Variables***
-&{produto}=      nome=nhoque molho páprica       tipo=Massas     preco=20.00
+&{produto}=      img=nhoque.jpg    nome=nhoque molho páprica       tipo=Massas     preco=20.00
 
 ***Test Cases***
 Novo prato
